@@ -16,13 +16,13 @@ function initFirebase() {
 
   try {
     const firebaseConfig = {
-      apiKey: "AIzaSyC-fkyxIV20z8DCqSL8BodEzDdDezbjFVE",
-      authDomain: "septoctor-cf82c.firebaseapp.com",
-      projectId: "septoctor-cf82c",
-      storageBucket: "septoctor-cf82c.firebasestorage.app",
-      messagingSenderId: "935827613646",
-      appId: "1:935827613646:web:bce68f9ae5e95ff84aed9f",
-      measurementId: "G-R4SPSD8MZX",
+      apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+      authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+      projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+      storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+      appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+      measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
     }
 
     app = getApps().length ? getApp() : initializeApp(firebaseConfig)
